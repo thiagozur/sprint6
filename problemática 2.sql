@@ -53,7 +53,7 @@ WHERE customer_DNI='57063950' OR customer_DNI='21207908' OR customer_DNI='436252
 
 --eliminar registro de Noel David
 DELETE FROM cliente
-WHERE customer_name='Noel' AND customer_surname='David'
+WHERE customer_surname='David'
 
 --consultar tipo de préstamo del préstamo de mayor importe
 SELECT loan_type
