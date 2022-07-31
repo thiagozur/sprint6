@@ -42,4 +42,12 @@ SELECT * FROM prestamo
 WHERE substr(loan_date, 6, 2)='04' OR substr(loan_date, 6, 2)='06' OR substr(loan_date, 6, 2)='08'
 ORDER BY loan_total
 
---
+--Obtener el importe total de los prestamos agrupados por tipo de préstamos.
+--Por cada tipo de préstamo de la tabla préstamo, calcular la suma de sus
+--importes. Renombrar la columna como loan_total_accu.
+SELECT
+	loan_type,
+	sum(loan_total) AS loan_type_accu
+FROM prestamo
+GROUP BY 
+	loan_type
